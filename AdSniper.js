@@ -18,7 +18,7 @@
             case 'frontpage.fok.nl' : return 'div[class*="desktop-billboard"]';
             case 'tweakers.net'     : return 'div[class*="billBoard"], div[class*="halfPage"], div[class*="leaderBoard"], div[class*="originalReplacementBannerStyle"';
             case 'www.nu.nl'        : return 'div[id="header"], iframe[id*="pexi"], iframe[id*="utif"], div[id*="r1"]';
-            default                 : return '';
+            default                 : return null;
         }
     }
 
@@ -27,7 +27,7 @@
         const selector = GetSelector();
 
         // get all ad elements
-        const elements = document.querySelectorAll(selector);
+        const elements = (selector) ? document.querySelectorAll(selector) : [];
 
         // iterate & remove
         elements.forEach(element => element.parentNode.removeChild(element));
