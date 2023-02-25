@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  This script kills ads before they even see the light of day.
 // @author       Jay Bats
-// @match        *
+// @match        *://*/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=nu.nl
 // @grant        none
 // ==/UserScript==
